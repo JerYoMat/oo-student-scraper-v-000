@@ -28,6 +28,7 @@ class Scraper
   end
    
   def self.scrape_profile_page(profile_url)
+<<<<<<< HEAD
     
     student_hash = {
      
@@ -58,3 +59,13 @@ class Scraper
   end 
 end 
   
+=======
+    html = open(profile_url)
+    doc = Nokogiri::HTML(html)
+    t = doc.xpath("//div[@class='vitals-container']/div[@class='social-icon-container']/a")
+ binding.pry 
+ end
+
+end
+
+>>>>>>> e4455b83ac9512f5a2c101a79fdbf4da151a0f98
